@@ -70,7 +70,7 @@
 
    Correo electrónico: romeroizan92@gmail.com
 
-   LinkedIn: https://www.linkedin.com/in/izan-romero-romero-a
+   LinkedIn: www.linkedin.com/in/izan-romero-romero-a747b0265
 
 📄 Licencia
 
