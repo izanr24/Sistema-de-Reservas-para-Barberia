@@ -1,22 +1,22 @@
 💈 Proyecto Barbería Web App
 
-  Este proyecto tiene como objetivo proporcionar una plataforma para la gestión de citas en una barbería, ofreciendo a los clientes una forma sencilla de reservar sus servicios y a los administradores un panel completo para gestionar dichas reservas.
+   Este proyecto tiene como objetivo proporcionar una plataforma para la gestión de citas en una barbería, ofreciendo a los clientes una forma sencilla de reservar sus servicios y a los administradores un panel completo para gestionar dichas reservas.
 
 🧾 Objetivo
 
-  El propósito principal de este proyecto es digitalizar el proceso de reservas de una barbería, permitiendo:
+   El propósito principal de este proyecto es digitalizar el proceso de reservas de una barbería, permitiendo:
 
-  Facilitar a los clientes la solicitud de citas en línea.
+   Facilitar a los clientes la solicitud de citas en línea.
 
-  Optimizar la organización interna de la barbería mediante un panel de administración.
+   Optimizar la organización interna de la barbería mediante un panel de administración.
 
-  Ofrecer una experiencia intuitiva y eficiente tanto para clientes como para barberos.
+   Ofrecer una experiencia intuitiva y eficiente tanto para clientes como para barberos.
 
 🚀 Características
 
-  Página principal con imágenes de la barbería.
+   Página principal con imágenes de la barbería.
 
-  Reserva de citas:
+   Reserva de citas:
 
     Nombre completo, teléfono y email del cliente.
 
@@ -34,7 +34,7 @@
 
     Inicio de sesión para usuarios registrados.
 
-  Dashboard de administración:
+   Dashboard de administración:
 
     Listado de citas por fecha.
 
@@ -42,36 +42,36 @@
 
     Acciones: marcar como completada o eliminar.
 
-Docker para facilitar el despliegue en cualquier entorno.
+   Docker para facilitar el despliegue en cualquier entorno.
 
 🔧 Tecnologías utilizadas
 
-  Frontend: HTML, CSS, JavaScript (personalizado a partir de plantilla).
+   Frontend: Angular, Css, TypeScript.
 
-  Backend: [indicar si usaste Node.js, Spring Boot, etc.].
+   Backend: Java SpringBoot.
 
-  Base de datos: [MySQL, PostgreSQL, etc.].
+   Base de datos: PostgreSql.
 
-  Contenedores: Docker.
+   Contenedores: Docker.
 
 📚 ¿Por qué es importante este proyecto?
 
-  En la actualidad, muchos negocios pequeños como barberías aún gestionan sus citas de forma manual. Este proyecto demuestra cómo una solución web sencilla puede:
+   En la actualidad, muchos negocios pequeños como barberías aún gestionan sus citas de forma manual. Este proyecto demuestra cómo una solución web sencilla puede:
 
-  Ahorrar tiempo en la administración.
+    Ahorrar tiempo en la administración.
 
-  Evitar errores o pérdidas de información.
+    Evitar errores o pérdidas de información.
 
-  Mejorar la experiencia del cliente con un sistema de reservas online.
+    Mejorar la experiencia del cliente con un sistema de reservas online.
 
 📨 Contacto
 
-  Si tienes alguna pregunta o deseas más información sobre el proyecto, puedes contactarme a través de:
+   Si tienes alguna pregunta o deseas más información sobre el proyecto, puedes contactarme a través de:
 
-  Correo electrónico: ejemplo@dominio.com
+   Correo electrónico: romeroizan92@gmail.com
 
-  LinkedIn: Tu Perfil
+   LinkedIn: https://www.linkedin.com/in/izan-romero-romero-a
 
 📄 Licencia
 
-  Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+   Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
