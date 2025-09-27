@@ -48,7 +48,7 @@
 
    Frontend: Angular, Css, TypeScript.
 
-   Backend: Java SpringBoot.
+   Backend: Java SpringBoot, Jwt.
 
    Base de datos: PostgreSql.
 
