@@ -61,7 +61,7 @@
 
       Instala Java 17 y PostgreSQL.
 
-      Configura las credenciales en el archivo application.properties con tu usuario y contraseña de la base de datos que use. Por defecto esta PostgreSql.
+      Configura las credenciales en el archivo application.properties con tu usuario y contraseña de la base de datos que use. Por defecto está PostgreSql.
 
       Antes de lanzar por primera vez el back ve a BarberAplication y sigue las instrucciones.
 
