@@ -1,0 +1,22 @@
+CREATE TABLE citas(
+    id SERIAL NOT NULL,
+    clientenombre varchar(255) NOT NULL,
+    telefonocliente varchar(50) NOT NULL,
+    emailcliente varchar(255) NOT NULL,
+    servicio varchar(255) NOT NULL,
+    barbero varchar(255),
+    fecha date NOT NULL,
+    comentarioadicional text,
+    precio numeric(10,2) NOT NULL,
+    hora time without time zone NOT NULL DEFAULT '09:00:00'::time without time zone,
+    completada boolean DEFAULT false,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE usuarios(
+    id SERIAL NOT NULL,
+    username varchar(50) NOT NULL,
+    password varchar(100) NOT NULL,
+    rol varchar(50) NOT NULL,
+    PRIMARY KEY(id)
+);

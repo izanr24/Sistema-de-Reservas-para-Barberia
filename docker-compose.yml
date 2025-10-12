@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    container_name: barber-db
+    environment:
+      POSTGRES_DB: barberia
+      POSTGRES_USER: izan
+      POSTGRES_PASSWORD: izan
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  backend:
+    build: ./back/barber
+    container_name: barber-back
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/barberia
+      SPRING_DATASOURCE_USERNAME: izan
+      SPRING_DATASOURCE_PASSWORD: izan
+    depends_on:
+      - db
+
+  frontend:
+    build: ./front
+    container_name: barber-front
+    ports:
+      - "8081:8080"
+    restart: unless-stopped
+    depends_on:
+      - backend
