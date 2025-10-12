@@ -44,6 +44,47 @@
 
    Docker para facilitar el despliegue en cualquier entorno.
 
+🧭 Instalación y ejecución
+
+   Sigue estos pasos para ejecutar el proyecto en tu entorno local 👇
+
+   1. Clonar el repositorio
+
+      git clone https://github.com/izanr24/Sistema_de_Reservas_para_Barberia.git
+      cd Sistema_de_Reservas_para_Barberia
+
+   2. Crear la base de datos
+
+      Copia el archivo.txt con las tablas a tu base de datos.
+
+   3. Backend (Spring Boot)
+
+      Instala Java 17 y PostgreSQL.
+
+      Crea una base de datos llamada barberia_db.
+
+      Configura las credenciales en el archivo application.properties con tu usuario y contraseña de PostgreSQL.
+
+      Inicia el backend con:   ./gradlew bootRun
+
+      La API quedará disponible en http://localhost:8080.
+
+   4. Frontend (Angular)
+
+      Instala Node.js y Angular CLI si no los tienes.
+
+      Entra a la carpeta del frontend (por ejemplo frontend/).
+
+      Instala las dependencias:
+
+      npm install
+
+      Ejecuta el servidor de desarrollo:
+
+      ng serve
+
+      Abre http://localhost:4200 en tu navegador.
+
 🔧 Tecnologías utilizadas
 
    Frontend: Angular, Css, TypeScript.
