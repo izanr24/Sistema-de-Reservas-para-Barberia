@@ -1,205 +1,115 @@
-# 💈 Sistema de Citas para Barbería
+##💈 Proyecto Barbería Web App
 
-Sistema completo de gestión de citas para barbería con frontend y backend en Node.js.
+Este proyecto tiene como objetivo proporcionar una plataforma para la gestión de citas en una barbería, ofreciendo a los clientes una forma sencilla de reservar sus servicios y a los administradores un panel completo para gestionar dichas reservas.
 
-## 🚀 Características
+🧾 Objetivo
 
-- ✅ **Reserva de citas online** con horarios disponibles en tiempo real
-- ✅ **Gestión inteligente de horarios** - solo muestra horas disponibles
-- ✅ **Múltiples servicios** - corte, barba, afeitado, facial
-- ✅ **Selección de barbero** preferido (opcional)
-- ✅ **Cálculo automático** de precios y duración
-- ✅ **Validaciones completas** de datos
-- ✅ **Base de datos MongoDB** para persistencia
-- ✅ **API REST** completa
-- ✅ **Panel de administración** (próximamente)
+El propósito principal de este proyecto es digitalizar el proceso de reservas de una barbería, permitiendo:
 
-## 📋 Requisitos
+Facilitar a los clientes la solicitud de citas en línea.
 
-- **SpringBoot**
-- **PostgreSql**
-- **Navegador web**
+Optimizar la organización interna de la barbería mediante un panel de administración.
 
-## 🛠️ Instalación
+Ofrecer una experiencia intuitiva y eficiente tanto para clientes como para barberos.
 
-### 1. Clonar el repositorio
-```bash
-git clone <tu-repositorio>
-cd barberia-app
-```
+🚀 Características
 
-### 2. Instalar dependencias del backend
-```bash
-cd Back
+Página principal con imágenes de la barbería.
+
+Reserva de citas:
+
+Nombre completo, teléfono y email del cliente.
+
+Selección de servicio (corte de pelo, recorte de barba, afeitado completo, mascarilla facial).
+
+Elección de barbero (4 disponibles).
+
+Fecha y hora de la cita.
+
+Comentarios adicionales.
+
+Cálculo automático del total.
+
+Validación de todos los campos antes de confirmar.
+
+Inicio de sesión para usuarios registrados.
+Dashboard de administración:
+
+Listado de citas por fecha.
+
+Detalle de cliente y servicio reservado.
+
+Acciones: marcar como completada o eliminar.
+Docker para facilitar el despliegue en cualquier entorno.
+
+🧭 Instalación y ejecución
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local 👇
+
+Clonar el repositorio
+
+git clone https://github.com/izanr24/Sistema_de_Reservas_para_Barberia.git
+cd Sistema_de_Reservas_para_Barberia
+
+Crear la base de datos
+
+Copia el archivo.txt con las tablas a tu base de datos.
+
+Backend (Spring Boot)
+
+Instala Java 17 y PostgreSQL.
+
+Configura las credenciales en el archivo application.properties con tu usuario y contraseña de la base de datos que use. Por defecto está PostgreSql.
+
+Antes de lanzar por primera vez el back ve a BarberAplication y sigue las instrucciones.
+
+Inicia el backend con: ./gradlew bootRun
+
+La API quedará disponible en http://localhost:8080.
+
+Frontend (Angular)
+
+Instala Node.js y Angular CLI si no los tienes.
+
+Entra a la carpeta del frontend (por ejemplo frontend/).
+
+Instala las dependencias:
+
 npm install
-```
 
-### 3. Configurar variables de entorno
-Edita el archivo `Back/.env` con tus datos:
+Ejecuta el servidor de desarrollo:
 
-```env
-# Base de datos PostgreSql
-MONGODB_URI=mongodb://localhost:27017/barberia
-# O usa MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://usuario:password@cluster.mongodb.net/barberia
+ng serve
 
-# Configuración de email (opcional)
-EMAIL_USER=tu_email@gmail.com
-EMAIL_PASS=tu_app_password
-```
+Abre http://localhost:4200 en tu navegador.
 
-### 4. Inicializar la base de datos
-```bash
-cd Back
-node scripts/initDB.js
-```
+🔧 Tecnologías utilizadas
 
-### 5. Iniciar el servidor
-```bash
-npm run dev
-# O para producción:
-npm start
-```
+Frontend: Angular, Css, TypeScript.
 
-El servidor estará disponible en: `http://localhost:3000`
+Backend: Java SpringBoot, Jwt.
 
-### 6. Abrir el frontend
-Abre el archivo `Front/html/solicitarCita.html` en tu navegador.
+Base de datos: PostgreSql.
 
-## 📁 Estructura del proyecto
+Contenedores: Docker.
 
-```
-barberia-app/
-├── Front/                  # Frontend
-│   ├── html/
-│   │   ├── index.html
-│   │   └── solicitarCita.html
-│   ├── js/
-│   │   └── citas.js       # Lógica de citas
-│   ├── css/               # Estilos
-│   └── img/               # Imágenes
-├── Back/                   # Backend Node.js
-│   ├── models/            # Modelos de MongoDB
-│   │   ├── Cliente.js
-│   │   ├── Barbero.js
-│   │   ├── Cita.js
-│   │   └── Servicio.js
-│   ├── routes/            # Rutas de la API
-│   │   ├── citas.js
-│   │   ├── servicios.js
-│   │   ├── barberos.js
-│   │   ├── clientes.js
-│   │   └── admin.js
-│   ├── scripts/
-│   │   └── initDB.js      # Inicializar BD
-│   ├── server.js          # Servidor principal
-│   ├── package.json
-│   └── .env               # Variables de entorno
-└── README.md
-```
+📚 ¿Por qué es importante este proyecto?
 
-## 🔧 API Endpoints
+En la actualidad, muchos negocios pequeños como barberías aún gestionan sus citas de forma manual. Este proyecto demuestra cómo una solución web sencilla puede:
 
-### Citas
-- `GET /api/citas/disponibilidad/:fecha` - Horarios disponibles
-- `POST /api/citas` - Crear nueva cita
-- `GET /api/citas/:id` - Obtener cita por ID
-- `PUT /api/citas/:id/estado` - Actualizar estado
-- `DELETE /api/citas/:id` - Cancelar cita
+Ahorrar tiempo en la administración.
 
-### Servicios
-- `GET /api/servicios` - Listar servicios
-- `GET /api/servicios/:codigo` - Obtener servicio
+Evitar errores o pérdidas de información.
 
-### Barberos
-- `GET /api/barberos` - Listar barberos
-- `GET /api/barberos/:id` - Obtener barbero
+Mejorar la experiencia del cliente con un sistema de reservas online.
+📨 Contacto
 
-### Admin
-- `GET /api/admin/dashboard` - Estadísticas
-- `GET /api/admin/citas/calendario/:fecha` - Calendario
+Si tienes alguna pregunta o deseas más información sobre el proyecto, puedes contactarme a través de:
 
-## 💡 Uso del sistema
+Correo electrónico: romeroizan92@gmail.com
 
-### Para clientes:
-1. Visita `solicitarCita.html`
-2. Selecciona uno o más servicios
-3. Elige una fecha (lunes a viernes)
-4. Selecciona un horario disponible
-5. Completa tus datos y confirma
+LinkedIn: www.linkedin.com/in/izan-romero-romero-a747b0265
 
-### Para administradores:
-- Accede a las rutas `/api/admin/*` para estadísticas
-- Usa herramientas como Postman para gestionar citas
+📄 Licencia
 
-## 🎯 Configuración de horarios
-
-En el archivo `.env` puedes configurar:
-
-```env
-# Horarios de trabajo
-HORARIO_INICIO=9          # 9:00 AM
-HORARIO_FIN=20           # 8:00 PM
-INTERVALO_MINUTOS=30     # Slots de 30 minutos
-
-# Días cerrados (0=Domingo, 6=Sábado)
-DIAS_CERRADOS=0,6        # Cerrado fines de semana
-```
-
-## 🔍 Solución de problemas
-
-### Error de conexión a MongoDB
-```bash
-# Verificar que MongoDB esté corriendo
-mongod --version
-
-# O usar MongoDB Atlas (cloud)
-# Actualiza MONGODB_URI en .env
-```
-
-### Error CORS en el navegador
-- Asegúrate de que el servidor esté corriendo en puerto 3000
-- Verifica que el frontend use `http://localhost:3000/api`
-
-### Los horarios no aparecen
-1. Verifica que el servidor esté corriendo
-2. Abre las herramientas de desarrollador (F12)
-3. Revisa la consola por errores
-4. Asegúrate de seleccionar servicios y fecha válida
-
-## 📊 Datos de prueba
-
-El script `initDB.js` crea:
-
-### Servicios:
-- **Corte de pelo** - 30 min - 8€
-- **Recorte de barba** - 20 min - 9€  
-- **Afeitado completo** - 25 min - 10€
-- **Mascarilla facial** - 45 min - 15€
-
-### Barberos:
-- **Johnny Lawrence** - Especialista en cortes clásicos
-- **Daniel LaRusso** - Experto en tratamientos faciales
-- **Tory Nichols** - Barbera versátil
-- **Samantha LaRusso** - Especialista en cortes modernos
-
-## 🚀 Próximas mejoras
-
-- [ ] Panel de administración web
-- [ ] Notificaciones por email/SMS
-- [ ] Sistema de calificaciones
-- [ ] Integración con calendario
-- [ ] App móvil
-- [ ] Pagos online
-
-## 📞 Soporte
-
-Si tienes problemas:
-1. Revisa este README
-2. Verifica los logs del servidor
-3. Comprueba la consola del navegador
-4. Asegúrate de que MongoDB esté corriendo
-
----
-
-**¡Tu barbería ahora tiene un sistema de citas profesional! 💈✨**
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
