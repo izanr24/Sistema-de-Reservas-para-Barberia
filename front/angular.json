@@ -1,0 +1,140 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "barber-citas": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              }
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/styles.scss",
+              "src/assets/css/venobox/venobox.css",
+              "src/assets/css/animate.min.css",
+              "src/assets/css/barber-icons.css",
+              "src/assets/css/button.css",
+              "src/assets/css/elegant-font-icons.css",
+              "src/assets/css/elegant-line-icons.css",
+              "src/assets/css/main.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/owl.carousel.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/slicknav.min.css",
+              "src/assets/css/themify-icons.css",
+              "src/assets/js/vendor/slicknav.min.css"
+            ],
+            "scripts": [
+              "src/assets/js/vendor/jquery-1.12.4.min.js",
+              "src/assets/js/vendor/bootstrap.min.js",
+              "src/assets/js/vendor/imagesloaded.pkgd.min.js",
+              "src/assets/js/vendor/jquery.ajaxchimp.min.js",
+              "src/assets/js/vendor/jquery.counterup.min.js",
+              "src/assets/js/vendor/jquery.isotope.v3.0.2.js",
+              "src/assets/js/vendor/jquery.mb.YTPlayer.min.js",
+              "src/assets/js/vendor/jquery.nice-select.min.js",
+              "src/assets/js/vendor/jquery.slicknav.min.js",
+              "src/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js",
+              "src/assets/js/vendor/owl.carousel.min.js",
+              "src/assets/js/vendor/smooth-scroll.min.js",
+              "src/assets/js/vendor/venobox.min.js",
+              "src/assets/js/vendor/wow.min.js",
+              "src/assets/js/appointment.js",
+              "src/assets/js/contact.js",
+              "src/assets/js/main.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2MB",
+                  "maximumError": "2MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "barber-citas:build:production"
+            },
+            "development": {
+              "buildTarget": "barber-citas:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.scss"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "f8472ac0-429b-40d8-8d31-6c8e94afa3f2"
+  }
+}

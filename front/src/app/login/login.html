@@ -1,0 +1,15 @@
+<li> <a data-scroll class="nav-link active" href="../index/index.html"> Home <span
+                                        class="sr-only"></span> </a>
+
+                            </li>
+
+<form (ngSubmit)="onLogin()">
+
+    <input [(ngModel)]="username" name="username" placeholder="Usuario" required>
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Contraseña" required>
+
+    <button class="menu-btn" type="submit"> Login </button>
+
+</form>
+
+<app-citas/>

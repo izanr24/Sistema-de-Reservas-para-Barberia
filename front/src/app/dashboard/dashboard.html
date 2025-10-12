@@ -1,0 +1,73 @@
+<div class="row justify-content-end me-5">
+
+    <div class="col-sm-2 col-md-2 col-lg-1 home">
+
+        <a data-scroll class="nav-link active" href="../index/index.html"> Home <span class="sr-only"></span> </a>
+
+    </div>
+
+</div>
+
+<div class="container mt-3">
+
+    <h2> Dashboard del Propietario </h2>
+
+    <div class="form-group my-3">
+
+        <label> Selecciona fecha: </label>
+        <input type="date" class="form-control" [(ngModel)]="fechaSeleccionada" (change)="onFechaChange($event)">
+
+    </div>
+
+    <table class="table table-striped">
+
+        <thead>
+
+            <tr>
+
+                <th> Cliente </th>
+                <th> Teléfono </th>
+                <th> Email </th>
+                <th> Servicio </th>
+                <th> Precio </th>
+                <th> Barbero </th>
+                <th> Fecha y hora </th>
+                <th> Comentario Adicional </th>
+                <th> Acciones </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let cita of citas" [class.completada]="cita.completada">
+
+                <td> {{ cita.clienteNombre }} </td>
+                <td> {{ cita.telefonoCliente }} </td>
+                <td> {{ cita.emailCliente }} </td>
+                <td> {{ cita.servicio }} </td>
+                <td> {{ cita.precio}} </td>
+                <td> {{ cita.barbero }} </td>
+                <td> {{ cita.fecha + ' ' + cita.hora }} </td>
+                <td> {{ cita.comentarioAdicional }} </td>
+
+                <td>
+
+                    <button class="btn btn-sm me-3" [class.btn-success]="!cita.completada" [class.btn-secondary]="cita.completada" (click)="completarCita(cita)"> 
+
+                        {{ cita.completada ? 'Desmarcar' : 'Completar' }}
+
+                    </button>
+
+                    <button class="btn btn-danger btn-sm" (click)="cancelarCita(cita)"> Cancelar </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
