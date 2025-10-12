@@ -61,15 +61,15 @@
 
       Instala Java 17 y PostgreSQL.
 
-      Crea una base de datos llamada barberia_db.
+      Configura las credenciales en el archivo application.properties con tu usuario y contraseña de la base de datos que use. Por defecto esta PostgreSql.
 
-      Configura las credenciales en el archivo application.properties con tu usuario y contraseña de PostgreSQL.
+      Antes de lanzar por primera vez el back ve a BarberAplication y sigue las instrucciones.
 
       Inicia el backend con:   ./gradlew bootRun
 
       La API quedará disponible en http://localhost:8080.
 
-   4. Frontend (Angular)
+   5. Frontend (Angular)
 
       Instala Node.js y Angular CLI si no los tienes.
 
