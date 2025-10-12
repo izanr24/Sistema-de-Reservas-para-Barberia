@@ -50,7 +50,7 @@
 
    1. Clonar el repositorio
 
-      git clone https://github.com/izanr24/Sistema_de_Reservas_para_Barberia.git
+      git clone https://github.com/izanr24/Sistema_de_Reservas_para_Barberia.git     
       cd Sistema_de_Reservas_para_Barberia
 
    2. Crear la base de datos
