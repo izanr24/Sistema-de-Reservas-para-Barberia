@@ -1,115 +1,118 @@
 💈 Proyecto Barbería Web App
 
-Este proyecto tiene como objetivo proporcionar una plataforma para la gestión de citas en una barbería, ofreciendo a los clientes una forma sencilla de reservar sus servicios y a los administradores un panel completo para gestionar dichas reservas.
+   Este proyecto tiene como objetivo proporcionar una plataforma para la gestión de citas en una barbería, ofreciendo a los clientes una forma sencilla de reservar sus servicios y a los administradores un panel completo para gestionar dichas reservas.
 
 🧾 Objetivo
 
-El propósito principal de este proyecto es digitalizar el proceso de reservas de una barbería, permitiendo:
+   El propósito principal de este proyecto es digitalizar el proceso de reservas de una barbería, permitiendo:
 
-Facilitar a los clientes la solicitud de citas en línea.
+   Facilitar a los clientes la solicitud de citas en línea.
 
-Optimizar la organización interna de la barbería mediante un panel de administración.
+   Optimizar la organización interna de la barbería mediante un panel de administración.
 
-Ofrecer una experiencia intuitiva y eficiente tanto para clientes como para barberos.
+   Ofrecer una experiencia intuitiva y eficiente tanto para clientes como para barberos.
 
 🚀 Características
 
-Página principal con imágenes de la barbería.
+   Página principal con imágenes de la barbería.
 
-Reserva de citas:
+   Reserva de citas:
 
-Nombre completo, teléfono y email del cliente.
+    Nombre completo, teléfono y email del cliente.
 
-Selección de servicio (corte de pelo, recorte de barba, afeitado completo, mascarilla facial).
+    Selección de servicio (corte de pelo, recorte de barba, afeitado completo, mascarilla facial).
 
-Elección de barbero (4 disponibles).
+    Elección de barbero (4 disponibles).
 
-Fecha y hora de la cita.
+    Fecha y hora de la cita.
 
-Comentarios adicionales.
+    Comentarios adicionales.
 
-Cálculo automático del total.
+    Cálculo automático del total.
 
-Validación de todos los campos antes de confirmar.
+    Validación de todos los campos antes de confirmar.
 
-Inicio de sesión para usuarios registrados.
-Dashboard de administración:
+    Inicio de sesión para usuarios registrados.
 
-Listado de citas por fecha.
+   Dashboard de administración:
 
-Detalle de cliente y servicio reservado.
+    Listado de citas por fecha.
 
-Acciones: marcar como completada o eliminar.
-Docker para facilitar el despliegue en cualquier entorno.
+    Detalle de cliente y servicio reservado.
+
+    Acciones: marcar como completada o eliminar.
+
+   Docker para facilitar el despliegue en cualquier entorno.
 
 🧭 Instalación y ejecución
 
-Sigue estos pasos para ejecutar el proyecto en tu entorno local 👇
+   Sigue estos pasos para ejecutar el proyecto en tu entorno local 👇
 
-Clonar el repositorio
+   1. Clonar el repositorio
 
-git clone https://github.com/izanr24/Sistema_de_Reservas_para_Barberia.git
-cd Sistema_de_Reservas_para_Barberia
+      git clone https://github.com/izanr24/Sistema_de_Reservas_para_Barberia.git     
+      cd Sistema_de_Reservas_para_Barberia
 
-Crear la base de datos
+   2. Crear la base de datos
 
-Copia el archivo.txt con las tablas a tu base de datos.
+      Copia el archivo.txt con las tablas a tu base de datos.
 
-Backend (Spring Boot)
+   3. Backend (Spring Boot)
 
-Instala Java 17 y PostgreSQL.
+      Instala Java 17 y PostgreSQL.
 
-Configura las credenciales en el archivo application.properties con tu usuario y contraseña de la base de datos que use. Por defecto está PostgreSql.
+      Configura las credenciales en el archivo application.properties con tu usuario y contraseña de la base de datos que use. Por defecto está PostgreSql.
 
-Antes de lanzar por primera vez el back ve a BarberAplication y sigue las instrucciones.
+      Antes de lanzar por primera vez el back ve a BarberAplication y sigue las instrucciones.
 
-Inicia el backend con: ./gradlew bootRun
+      Inicia el backend con:   ./gradlew bootRun
 
-La API quedará disponible en http://localhost:8080.
+      La API quedará disponible en http://localhost:8080.
 
-Frontend (Angular)
+   5. Frontend (Angular)
 
-Instala Node.js y Angular CLI si no los tienes.
+      Instala Node.js y Angular CLI si no los tienes.
 
-Entra a la carpeta del frontend (por ejemplo frontend/).
+      Entra a la carpeta del frontend (por ejemplo frontend/).
 
-Instala las dependencias:
+      Instala las dependencias:
 
-npm install
+      npm install
 
-Ejecuta el servidor de desarrollo:
+      Ejecuta el servidor de desarrollo:
 
-ng serve
+      ng serve
 
-Abre http://localhost:4200 en tu navegador.
+      Abre http://localhost:4200 en tu navegador.
 
 🔧 Tecnologías utilizadas
 
-Frontend: Angular, Css, TypeScript.
+   Frontend: Angular, Css, TypeScript.
 
-Backend: Java SpringBoot, Jwt.
+   Backend: Java SpringBoot, Jwt.
 
-Base de datos: PostgreSql.
+   Base de datos: PostgreSql.
 
-Contenedores: Docker.
+   Contenedores: Docker.
 
 📚 ¿Por qué es importante este proyecto?
 
-En la actualidad, muchos negocios pequeños como barberías aún gestionan sus citas de forma manual. Este proyecto demuestra cómo una solución web sencilla puede:
+   En la actualidad, muchos negocios pequeños como barberías aún gestionan sus citas de forma manual. Este proyecto demuestra cómo una solución web sencilla puede:
 
-Ahorrar tiempo en la administración.
+    Ahorrar tiempo en la administración.
 
-Evitar errores o pérdidas de información.
+    Evitar errores o pérdidas de información.
 
-Mejorar la experiencia del cliente con un sistema de reservas online.
+    Mejorar la experiencia del cliente con un sistema de reservas online.
+
 📨 Contacto
 
-Si tienes alguna pregunta o deseas más información sobre el proyecto, puedes contactarme a través de:
+   Si tienes alguna pregunta o deseas más información sobre el proyecto, puedes contactarme a través de:
 
-Correo electrónico: romeroizan92@gmail.com
+   Correo electrónico: romeroizan92@gmail.com
 
-LinkedIn: www.linkedin.com/in/izan-romero-romero-a747b0265
+   LinkedIn: www.linkedin.com/in/izan-romero-romero-a747b0265
 
 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+   Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
