@@ -1,4 +1,4 @@
-##💈 Proyecto Barbería Web App
+💈 Proyecto Barbería Web App
 
 Este proyecto tiene como objetivo proporcionar una plataforma para la gestión de citas en una barbería, ofreciendo a los clientes una forma sencilla de reservar sus servicios y a los administradores un panel completo para gestionar dichas reservas.
 
